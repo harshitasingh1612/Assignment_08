@@ -28,6 +28,24 @@ class CD:
     cd_artist = ''
     
     def __init__(self, cd_id, cd_title, cd_artist):
+        """
+        
+        Initializes the attributes
+
+        Parameters
+        ----------
+        cd_id : TYPE
+            DESCRIPTION.
+        cd_title : TYPE
+            DESCRIPTION.
+        cd_artist : TYPE
+            DESCRIPTION.
+
+        Returns
+        -------
+        None.
+
+        """
         self.cd_id = str(cd_id)
         self.cd_title = str(cd_title)
         self.cd_artist = str(cd_artist)
@@ -35,12 +53,39 @@ class CD:
     
     
     def contents(self):
+        """
+        Returns the contents as a list 
+
+        Returns
+        -------
+        list
+            DESCRIPTION.
+
+        """
         return [self.cd_id, self.cd_title, self.cd_artist]
     
     def display(self):
+        """
+        Displays the data in the required fornat
+
+        Returns
+        -------
+        TYPE
+            DESCRIPTION.
+
+        """
         return '{}\t{} (by:{})'.format(*self.contents()) 
     
     def __str__(self):
+        """
+        Joines the attributes by a delimiter
+
+        Returns
+        -------
+        TYPE
+            DESCRIPTION.
+
+        """
         return ','.join(self.contents())
     
     
